@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-bold md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl font-bold;
+  }
+
+  h5 {
+    @apply text-lg font-bold;
+  }
+
+  .bg-primary-color {
+    background-color: #f35000;
+  }
+  .text-primary-color {
+    color: #f35000;
+  }
+
+  .wrapper {
+    @apply mx-auto py-4 md:py-10;
+    max-width: 90%;
+  }
+}
+
+/* scroll-behavior */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+.gradient {
+  background: linear-gradient(90deg, #da47ff 0%, #fab663 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}

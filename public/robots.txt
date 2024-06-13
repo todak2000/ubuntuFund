@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://renamarket-ecommerce-seo-next.vercel.app
+
+# Sitemaps
+Sitemap: https://renamarket-ecommerce-seo-next.vercel.app/sitemap.xml

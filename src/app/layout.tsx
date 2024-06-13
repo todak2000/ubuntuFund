@@ -25,7 +25,14 @@ export const metadata: Metadata = {
       url: "/seo/maskable-icon.png",
     },
   },
-  keywords: ["Charity", "Giving", "Crowd funding", "Productivity", "Africa", "Charitable Giving"],
+  keywords: [
+    "Charity",
+    "Giving",
+    "Crowd funding",
+    "Productivity",
+    "Africa",
+    "Charitable Giving",
+  ],
   manifest: `/seo/site.webmanifest`,
   applicationName: APP_NAME,
   appleWebApp: {
@@ -74,10 +81,9 @@ export const viewport: Viewport = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  title?: string;
 }
 
-const RootLayout = ({ children, title }: RootLayoutProps) => {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>

@@ -20,7 +20,7 @@ const WhyCard: FC<WhyCardProps> = ({
       ) : (
         <Image
           alt={`${title} image`}
-          src={icon}
+          src={icon as string}
           width={48}
           height={48}
           loading="lazy"

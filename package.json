@@ -2,7 +2,7 @@
   "name": "ubuntu-fund",
   "version": "0.1.0",
   "private": true,
- "scripts": {
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "build:turbo": "yarn dlx turbo@latest build",
@@ -18,9 +18,8 @@
     "release": "cross-env HUSKY=0 standard-version",
     "push-release": "git push --follow-tags origin main",
     "prepare": "husky"
-},
+  },
   "dependencies": {
-    "@algolia/recommend": "^4.23.3",
     "@faker-js/faker": "^8.4.1",
     "@firebase/firestore": "^4.6.3",
     "@hookform/resolvers": "^3.4.0",
@@ -30,10 +29,10 @@
     "@reduxjs/toolkit": "^2.2.3",
     "@tanstack/react-query": "^5.35.1",
     "@tanstack/react-query-devtools": "^5.35.1",
-    "algoliasearch": "^4.23.3",
     "clsx": "^2.1.0",
     "firebase": "^10.12.2",
     "firestore": "^1.1.6",
+    "framer-motion": "^11.2.10",
     "libphonenumber-js": "^1.11.2",
     "lodash": "^4.17.21",
     "lucide-react": "^0.367.0",

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const NextSitemapConfig = {
-  siteUrl: "https://renamarket-ecommerce-seo-next.vercel.app",
+  siteUrl: "https://bent-star-free-nerve-production.pipeops.app",
   generateRobotsTxt: true,
 };
 

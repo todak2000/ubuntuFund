@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    url: "https://renamarkets.com",
+    url: "https://bent-star-free-nerve-production.pipeops.app",
     title: APP_NAME,
     description: DESC,
     images: {

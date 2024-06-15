@@ -3,9 +3,10 @@ import { FcGoogle } from "react-icons/fc";
 import { cn } from "@/lib/styles/utils";
 import { signInWithGoogle } from "@/lib/firebase/firebase";
 import { createSession } from "@/lib/hooks/serverActions/auth";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { modal } from "@/lib/store";
 import { useRouter } from "next/navigation";
+import { setModal } from "@/lib/store/slices/modal";
 
 type ButtonProps = {
   otherClass: string;
@@ -13,11 +14,13 @@ type ButtonProps = {
 
 export const GoogleButton: React.FC<ButtonProps> = ({ otherClass }) => {
   const modall = useSelector(modal);
+  const dispatch = useDispatch();
   const { push } = useRouter();
   const handleSignIn = async () => {
     const userUid = await signInWithGoogle();
     if (userUid) {
       await createSession(userUid);
+      dispatch(setModal({ open: false, type: "" }));
     }
     if (modall.redirect) {
       push(modall.redirect);

@@ -65,7 +65,7 @@ const AddComment: React.FC = () => {
                       <span className="h-6 w-6 rounded-full text-white text-xl bg-black flex flex-row justify-center items-center">
                         A
                       </span>
-                      <h4>@ Anonymous~</h4>
+                      <h4>@Anonymous~</h4>
                       <TimeAgo timestamp={comment.id} />
                     </div>
                     <span className="flex text-sm h-10 flex-row justify-start items-center w-full">

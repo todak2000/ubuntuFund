@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bent-star-free-nerve-production.pipeops.app/
+Host: https://bent-star-free-nerve-production.pipeops.app
 
 # Sitemaps
-Sitemap: https://bent-star-free-nerve-production.pipeops.app//sitemap.xml
+Sitemap: https://bent-star-free-nerve-production.pipeops.app/sitemap.xml

@@ -1,14 +1,10 @@
-"use client";
-
 import AddComment from "@/lib/components/donate/comment";
 import LongCard from "@/lib/components/donate/longCard";
 import React from "react";
 import { campaignData } from "@/lib/components/constants/database";
 
-import { useParams } from "next/navigation";
+const DonationDetail = ({ params }: { params: { id: string } }) => {
 
-const DonationDetail = () => {
-  const params = useParams();
   const cards: any = campaignData;
   const findUserByEmail = (id: string) => {
     return cards.find((card: any) => card.id === id);

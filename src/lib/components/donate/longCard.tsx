@@ -73,7 +73,7 @@ const LongCard: React.FC<{
           <MdCategory className="mr-3" /> {card.category}
         </p>
         <p className="my-2 text-xs md:text-sm text-left">{card.description}</p>
-        <div className="flex flex-row justify-evenly items-center h-20 w-full bg-gray-100 rounded ">
+        <div className="flex flex-row items-center my-4 w-full">
           <ShareButton
             toggleShareButton={toggleShareButton}
             showOptions={showOptions}

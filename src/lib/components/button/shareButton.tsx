@@ -1,4 +1,3 @@
-import React, { RefObject, useEffect, useRef, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa6";
@@ -10,14 +9,17 @@ import { FaLinkedin } from "react-icons/fa";
 interface ShareBtnType {
   showOptions: boolean;
   toggleShareButton: () => void;
+  campaign_Id: string;
 }
 
 const ShareButton = (props: ShareBtnType) => {
-  const { showOptions, toggleShareButton } = props;
+  const { showOptions, toggleShareButton, campaign_Id } = props;
 
   const copyLink = async () => {
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(
+        `https://ubuntu-fund-pre.vercel.app/campaign/${campaign_Id}`
+      );
       alert("Link copied to clipboard!");
     } catch (err) {
       console.error("Error copying link: ", err);
@@ -27,17 +29,17 @@ const ShareButton = (props: ShareBtnType) => {
   const socialChannelData = [
     {
       name: "Facebook",
-      link: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
+      link: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://ubuntu-fund-pre.vercel.app/campaign/${campaign_Id}`)}`,
       icon: <FaFacebook className="text-xl" />,
     },
     {
       name: "Twitter",
-      link: `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`,
+      link: `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://ubuntu-fund-pre.vercel.app/campaign/${campaign_Id}`)}`,
       icon: <FaSquareXTwitter className="text-xl" />,
     },
     {
       name: "Linkedin",
-      link: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}`,
+      link: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://ubuntu-fund-pre.vercel.app/campaign/${campaign_Id}`)}`,
       icon: <FaLinkedin className="text-xl" />,
     },
   ];
@@ -51,7 +53,7 @@ const ShareButton = (props: ShareBtnType) => {
       </div>
 
       {showOptions && (
-        <div className="flex flex-col bottom-0  md:right-0 mx-auto md:mx-0 left-[-2rem] justify-start border border-gray-400 w-80 md:w-80 h-80 md:h-60 bg-white shadow-lg rounded items-center absolute p-4">
+        <div className="flex flex-col bottom-20  md:right-0 mx-auto md:mx-0 left-0 justify-start border border-gray-400 w-80 md:w-80 h-80 md:h-60 bg-white shadow-lg rounded items-center absolute p-4">
           <span className="flex w-full flex-row justify-between items-center">
             <h5 className="text-base"> Share </h5>
             <span
@@ -84,7 +86,7 @@ const ShareButton = (props: ShareBtnType) => {
             <div className="mt-2 w-full flex items-center">
               <input
                 type="text"
-                value={window.location.href}
+                value={`https://ubuntu-fund-pre.vercel.app/campaign/${campaign_Id}`}
                 readOnly
                 className="p-1 border text-xs w-11/12  border-gray-400 bg-gray-100 rounded-l"
               />

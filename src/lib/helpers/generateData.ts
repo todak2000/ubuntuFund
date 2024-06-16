@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import { categoriesArr } from "../components/constants/categories";
 
 export type DonateCardProps = {
+  id: string;
   imageUrl: string;
   category: string;
   recipient: string;
@@ -28,6 +29,7 @@ export const generateCards = (): DonateCardProps[] => {
     const amountRaised = amountToRaise * Math.random();
 
     return {
+      id: faker.string.uuid(),
       imageUrl: faker.image.avatar(),
       recipientQuestion: faker.helpers.arrayElement([
         "Personal Fundraising",

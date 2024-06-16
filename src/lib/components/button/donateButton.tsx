@@ -1,6 +1,6 @@
 import { key } from "@/lib/helpers/uniqueKey";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 import { BiSolidDonateHeart } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
@@ -40,15 +40,15 @@ const DonateButton = (props: DonateButtonType) => {
     },
   ];
   return (
-    <div className={` ${showList ? "z-10" : "z-0"}relative md:w-1/3 w-3/5`}>
+    <div className={` ${showList ? "z-10" : "z-0"} md:w-1/3 w-3/5`}>
       <div
         onClick={toggleDonateButton}
-        className={`flex flex-row justify-center bg-white hover:bg-gray-50 rounded-md shadow-md border h-10 w-full  items-center gap-2`}
+        className={`flex flex-row relative justify-center bg-white hover:bg-gray-50 rounded-md shadow-md border h-10 w-full  items-center gap-2`}
       >
         <BiSolidDonateHeart /> Donate Now
       </div>
       {showList && (
-        <div className="flex flex-col z-10 bottom-0 right-[-3rem] md:right-10 mx-auto md:mx-0  justify-start border border-gray-400 w-80 md:w-80 h-[25rem] md:h-[25rem] bg-white shadow-lg rounded items-center absolute p-4">
+        <div className="flex flex-col z-10 bottom-48 right-8 md:right-[15.5rem] mx-auto md:mx-0  justify-start border border-gray-400 w-80 md:w-80 h-[25rem] md:h-[25rem] bg-white shadow-lg rounded items-center absolute p-4">
           <span className="flex w-full flex-row justify-between items-center">
             <h5 className="text-base"> How do you wish to pay? </h5>
             <span
@@ -76,7 +76,7 @@ const DonateButton = (props: DonateButtonType) => {
                       alt="agent"
                       width={50}
                       height={50}
-                      loading="lazy"
+                      priority={true}
                     />
                   </span>
                 </span>

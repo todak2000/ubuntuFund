@@ -1,4 +1,6 @@
-import React, { useRef, useState } from "react";
+"use client";
+
+import React, { useState } from "react";
 import ProgressBar from "@/lib/components/progressBar/progressBar";
 
 import { BsFillPersonFill } from "react-icons/bs";
@@ -75,6 +77,7 @@ const LongCard: React.FC<{
           <ShareButton
             toggleShareButton={toggleShareButton}
             showOptions={showOptions}
+            campaign_Id={card.id}
           />
           <DonateButton
             toggleDonateButton={toggleDonateButton}

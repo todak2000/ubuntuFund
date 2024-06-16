@@ -14,7 +14,6 @@ interface ShareBtnType {
 
 const ShareButton = (props: ShareBtnType) => {
   const { showOptions, toggleShareButton } = props;
-  // const [showOptions, setShowOptions] = useState(false);
 
   const copyLink = async () => {
     try {
@@ -24,10 +23,6 @@ const ShareButton = (props: ShareBtnType) => {
       console.error("Error copying link: ", err);
     }
   };
-
-  // const toggleShareButton = () => {
-  //   setShowOptions(!showOptions);
-  // };
 
   const socialChannelData = [
     {

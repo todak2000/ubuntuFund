@@ -73,7 +73,6 @@ const DonateButton = (props: DonateButtonType) => {
                   <span className="flex flex-col justify-center items-center h-full w-1/5">
                     <Image
                       src={`${pay.imgUrl}`}
-                      // src={pay.imgUrl}
                       alt="agent"
                       width={50}
                       height={50}

@@ -5,8 +5,7 @@ import Button from "../button/mainButton";
 import { GoogleButton } from "../button/googleButton";
 import { useUserSession } from "@/lib/hooks/session";
 
-const Hero =  ({ session }: { session: string | null }) => {
-
+const Hero = ({ session }: { session: string | null }) => {
   const userSessionId = useUserSession(session);
   return (
     <>
@@ -22,7 +21,7 @@ const Hero =  ({ session }: { session: string | null }) => {
             )}
             <Button
               text="Browse Requests"
-              href="/"
+              href="/donate"
               customClass="bg-black hover:opacity-65 text-white"
             />
           </div>

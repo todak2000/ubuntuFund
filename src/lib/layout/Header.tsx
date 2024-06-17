@@ -41,10 +41,9 @@ const Header = ({ session }: { session: string | null }) => {
   };
   const closeModal = () => {
     dispatch(setModal({ open: false, type: "" }));
-    if(modall && modall.data && modall.onClose){
-      modall.onClose()
+    if (modall && modall.data && modall.onClose) {
+      modall.onClose();
     }
-    
   };
   const modall = useSelector(modal);
 

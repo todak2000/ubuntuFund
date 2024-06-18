@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/donate", icon: PiHandCoinsThin, label: "Donate" },
   { href: "/create", icon: CiCirclePlus, label: "Create" },
-  { href: "/statistics", icon: CiBoxList, label: "Projects" },
+  { href: "/campaigns", icon: CiBoxList, label: "Campaigns" },
   {
-    href: "/notifications",
+    href: "/notification",
     icon: IoIosNotificationsOutline,
     label: "Notifications",
   },
@@ -30,7 +30,10 @@ const MobileNav: FC = () => {
             href={item.href}
             className="flex flex-col items-center"
           >
-            <Icon size={24}  className={`${isActive ? "text-black" : "text-gray-400"}`} />
+            <Icon
+              size={24}
+              className={`${isActive ? "text-black" : "text-gray-400"}`}
+            />
             <span
               className={`text-xs mt-1 ${isActive ? "text-black" : "text-gray-400"}`}
             >

@@ -12,6 +12,7 @@ export interface DropDownProps {
   userSessionId: string | null;
   handleSignOut: () => void;
   handleModal: (text: string | null) => void;
+  setShowMobileSidebar: React.Dispatch<React.SetStateAction<boolean>>
 }
 export interface DropDownItemProps {
   title: string | null;

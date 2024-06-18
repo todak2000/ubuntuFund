@@ -178,12 +178,13 @@ const Header = ({ session }: { session: string | null }) => {
           )}
         </section>
         {showMobileSidebar && (
-          <div className="bg-white h-screen w-full absolute z-30 top-[50px] md:top-[107px]">
+          <div className="bg-gray-50  w-full absolute z-30 top-[50px] md:top-[107px]">
             <DropDown
               items={headerArr}
               handleModal={handleModal}
               userSessionId={userSessionId}
               handleSignOut={handleSignOut}
+              setShowMobileSidebar={setShowMobileSidebar}
             />
           </div>
         )}
